@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import {  User } from './user/entities/user.entity';
 import { RoleModule } from './role/role.module';
+import { Role } from './role/entities/role.entity';
 
 @Module({
   imports: [
@@ -15,7 +16,7 @@ import { RoleModule } from './role/role.module';
   username: 'sa',
   password: 'sasa',
   database: 'NestDB',
-  entities: [User],
+  entities: [User , Role],
   synchronize: true,
   options: {
     encrypt: false,
